@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Summary Toggle Demo</title>
+    <link rel="stylesheet" href="summary-toggle.css" />
+  </head>
+  <body>
+    <section data-summary-toggle aria-label="Article summary">
+      <ul>
+        <li>The council voted 9 to 4 to add protected bike lanes on three corridors.</li>
+        <li>Construction is expected to begin next spring.</li>
+        <li>Some business owners raised concerns about lost parking.</li>
+      </ul>
+    </section>
+
+    <script type="module">
+      import { initSummaryToggle } from './summary-toggle.js';
+      document.querySelectorAll('[data-summary-toggle]').forEach((el) => initSummaryToggle(el));
+    </script>
+  </body>
+</html>
